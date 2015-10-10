@@ -1,4 +1,4 @@
-from flask import Flask, redirect, request
+from flask import Flask, redirect, request, Markup
 app = Flask(__name__)
 
 posts = []
@@ -16,7 +16,6 @@ def index():
             <input type='submit' value='Submit'>
          </form>
          <form action='refresh'>
-            <input type='hidden' name='next' value='/'>
             <input type='submit' value='Refresh'>
          </form>
       </div>
@@ -28,13 +27,15 @@ def index():
 @app.route("/sendmsg", methods=["POST"])
 def post():
    # Add message to the list of posts and go back to the main page
-   posts.append(request.form["msg"])
+   # Fix 3: Escape user-supplied input to make it safe
+   posts.append(str(Markup.escape(request.form["msg"])))
    return redirect("/")
 
 @app.route("/refresh")
 def refresh():
-   nexturl = request.args.get("next").lower()
-   return redirect(nexturl)
+   # Fix 2: No user-supplied URL redirection
+   return redirect("/")
 
 if __name__ == "__main__":
-   app.run(debug=True)
+   # Fix 1: no debug in production!
+   app.run(debug=False)
