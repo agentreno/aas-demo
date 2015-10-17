@@ -12,17 +12,17 @@ Use software as a service (SaaS) to enhance the application:
 Method
 ======
 1. App familiarisation and Flask/Python recap
-..* Clone the repository and install dependencies
-..* Start the app and view in a browser
-..* Add a new route with a simple message
+  * Clone the repository and install dependencies
+  * Start the app and view in a browser
+  * Add a new route with a simple message
 2. Vulnerability review
-..* Review the app and source and find 3 vulnerabilities
-..* Demonstrate exploitation of those vulnerabilities
-..* Mitigate them
+  * Review the app and source and find 3 vulnerabilities
+  * Demonstrate exploitation of those vulnerabilities
+  * Mitigate them
 3. Deployment
-..* Upload the app to dedicated hardware (e.g. Raspberry Pi) and run the app
-..* Upload the app to an EC2 instance on AWS and run the app
-..* Upload the app to Heroku
+  * Upload the app to dedicated hardware (e.g. Raspberry Pi) and run the app
+  * Upload the app to an EC2 instance on AWS and run the app
+  * Upload the app to Heroku
 4. Monitoring
-..* Add log output to identify an attempt to add a script tag to messages
-..* Send the log output to Loggly
+  * Add log output to identify an attempt to add a script tag to messages
+  * Send the log output to Loggly
