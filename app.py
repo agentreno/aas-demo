@@ -1,4 +1,9 @@
 from flask import Flask, redirect, request, Markup
+import logging
+
+logging.basicConfig()
+logger = logging.getLogger(__name__)
+
 app = Flask(__name__)
 
 posts = []
@@ -27,6 +32,10 @@ def index():
 @app.route("/sendmsg", methods=["POST"])
 def post():
    # Add message to the list of posts and go back to the main page
+   # Fix 4: Monitor for injected script tags
+   if "<script>" in request.form["msg"]:
+      logging.warn("Attempted script tag injection")
+
    # Fix 3: Escape user-supplied input to make it safe
    posts.append(str(Markup.escape(request.form["msg"])))
    return redirect("/")
