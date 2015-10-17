@@ -1,11 +1,14 @@
 Aims
 ====
 Be able to build and read a basic web application
+
 Understand some web application vulnerabilities and learn how to fix them
+
 Learn how to deploy a web application to:
    1. Dedicated hardware
    2. Infrastructure as a Service (IaaS) e.g. Amazon Web Services (AWS)
    3. Platform as a Service (PaaS) e.g. Heroku
+
 Use software as a service (SaaS) to enhance the application:
    1. Set up monitoring SaaS using Loggly
 
