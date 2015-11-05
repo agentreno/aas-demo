@@ -4,28 +4,51 @@ Be able to build and read a basic web application
 
 Understand some web application vulnerabilities and learn how to fix them
 
-Learn how to deploy a web application to:
-   1. Dedicated hardware
-   2. Infrastructure as a Service (IaaS) e.g. Amazon Web Services (AWS)
-   3. Platform as a Service (PaaS) e.g. Heroku
+Learn how to deploy web applications to dedicated hardware, IaaS, PaaS and 
+use SaaS.
 
-Use software as a service (SaaS) to enhance the application:
-   1. Set up monitoring SaaS using Loggly
+Introduction
+============
+
+In this exercise, you will find 3 vulnerabilities in a sample web application, 
+demonstrate how to exploit them, and fix them. When this is done, you will 
+deploy the app to:
+
+* A Raspberry Pi
+* An IaaS solution (Amazon Web Services - AWS EC2)
+* A PaaS solution (Heroku)
+
+You will then use Loggly to provide basic audit and monitoring.
 
 Method
 ======
 1. App familiarisation and Flask/Python recap
-  * Clone the repository and install dependencies
-  * Start the app and view in a browser
-  * Add a new route with a simple message
+  * Check you have git, a text editor and Python installed
+  * Fork the demo repository
+  * Clone the forked repo to your local machine
+  * Run the flask web app and confirm that the Hello World page is displayed
+  * Add a new route at /message which displays a message of your choice
+  * Commit and push the changes to your repository
+
 2. Vulnerability review
-  * Review the app and source and find 3 vulnerabilities
-  * Demonstrate exploitation of those vulnerabilities
-  * Mitigate them
-3. Deployment
-  * Upload the app to dedicated hardware (e.g. Raspberry Pi) and run the app
-  * Upload the app to an EC2 instance on AWS and run the app
-  * Upload the app to Heroku
-4. Monitoring
+  * Look at the source code for the web application (app.py) - can you see any 
+    security problems?
+  * Find 3 vulnerabilities and confirm the answers with the trainer, ask for 
+    hints if needed!
+  * Open the web application and try to exploit these vulnerabilities
+  * Demonstrate exploitation of each vulnerability to the trainer, again ask 
+    for hints if needed!
+
+3. Vulnerability mitigation
+  * Make changes to the source code to fix the vulnerabilities
+  * Test the exploits from earlier to show they no longer work
+  * Show your changes to the trainer
+
+4. Deployment
+  * Deploy your code to a Raspberry Pi
+  * Deploy your code to an AWS EC2 instance
+  * Deploy your code to Heroku
+
+5. Monitoring
   * Add log output to identify an attempt to add a script tag to messages
   * Send the log output to Loggly
