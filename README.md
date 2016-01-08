@@ -24,11 +24,9 @@ Method
 ======
 1. App familiarisation and Flask/Python recap
   * Check you have git, a text editor and Python installed
-  * Fork the demo repository
-  * Clone the forked repo to your local machine
+  * Clone the repo to your local machine
   * Run the flask web app and confirm that the Hello World page is displayed (python app.py)
   * Add a new route at /message which displays a message of your choice
-  * Commit and push the changes to your repository
 
 2. Vulnerability review
   * Look at the source code for the web application (app.py) - can you see any 
