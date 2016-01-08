@@ -26,7 +26,7 @@ Method
   * Check you have git, a text editor and Python installed
   * Fork the demo repository
   * Clone the forked repo to your local machine
-  * Run the flask web app and confirm that the Hello World page is displayed
+  * Run the flask web app and confirm that the Hello World page is displayed (python app.py)
   * Add a new route at /message which displays a message of your choice
   * Commit and push the changes to your repository
 
