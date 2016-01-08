@@ -23,6 +23,7 @@ You will then use Loggly to provide basic audit and monitoring.
 Method
 ======
 1. App familiarisation and Flask/Python recap
+  * Check you have git, a text editor and Python installed
   * Clone the repo to your local machine
   * Run the flask web app and confirm that the Hello World page is displayed (python app.py)
   * Add a new route at /message which displays a message of your choice
