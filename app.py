@@ -7,15 +7,19 @@ posts = []
 def index():
    # Render the main page
    output = """
-      <form action='sendmsg' method='post'>
-         <input type='text' name='msg'>
-         <input type='submit' value='Submit'>
-      </form>
-      <form action='refresh'>
-         <input type='hidden' name='next' value='/'>
-         <input type='submit' value='Refresh'>
-      </form>
-      <h1>POSTS:</h1>
+      <link rel="stylesheet" href="/static/site.css">
+      <h1>Shoddy Incorporated Message Board</h1>
+      <h2>POSTS</h2>
+      <div>
+         <form action='sendmsg' method='post'>
+            <input type='text' name='msg' autofocus>
+            <input type='submit' value='Submit'>
+         </form>
+         <form action='refresh'>
+            <input type='hidden' name='next' value='/'>
+            <input type='submit' value='Refresh'>
+         </form>
+      </div>
    """
    for post in posts:
       output += "<p>" + post + "</p>"
