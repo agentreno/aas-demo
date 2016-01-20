@@ -53,7 +53,30 @@ Method
   * Deploy your code to a Raspberry Pi
   * Deploy your code to an AWS EC2 instance
   * Deploy your code to Heroku
+    * You'll need to have a [Heroku account](https://signup.heroku.com/) and
+      have the [Heroku toolbelt]
+      (https://devcenter.heroku.com/articles/heroku-command) installed.
+    * Follow this
+      [guide](https://community.nitrous.io/tutorials/deploying-a-flask-application-to-heroku)
+      bearing in mind that:
+        * You already have a git repo but may not have committed all of
+          your changes.
+        * There is already a requirements.txt file but you need the
+          gunicorn dependency.
+    * Alternatively, if you're having trouble or didn't implement all of
+      the security patches, create an app with `heroku create` and push
+      a prepared branch to Heroku with `git checkout -b heroku
+      origin/heroku` and `git push heroku heroku:master`. These commands
+      check out patched code, Heroku deployment files (mainly the
+      Procfile which tells Heroku how to run the app) and pushes the
+      local 'heroku' branch to the remote 'master' branch.
 
 5. Monitoring
   * Add log output to identify an attempt to add a script tag to messages
   * Send the log output to Loggly
+
+Extra Credit
+============
+Add more unit tests to tests.py to detect these vulnerabilities. Then
+add a git pre-commit hook that runs these tests and prevents a commit
+with a scary message to the developer if any tests fail.
