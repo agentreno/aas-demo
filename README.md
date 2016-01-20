@@ -4,14 +4,14 @@ Be able to build and read a basic web application
 
 Understand some web application vulnerabilities and learn how to fix them
 
-Learn how to deploy web applications to dedicated hardware, IaaS, PaaS and 
+Learn how to deploy web applications to dedicated hardware, IaaS, PaaS and
 use SaaS.
 
 Introduction
 ============
 
-In this exercise, you will find 3 vulnerabilities in a sample web application, 
-demonstrate how to exploit them, and fix them. When this is done, you will 
+In this exercise, you will find 3 vulnerabilities in a sample web application,
+demonstrate how to exploit them, and fix them. When this is done, you will
 deploy the app to:
 
 * A Raspberry Pi
@@ -23,18 +23,25 @@ You will then use Loggly to provide basic audit and monitoring.
 Method
 ======
 1. App familiarisation and Flask/Python recap
-  * Check you have git, a text editor and Python installed
-  * Clone the repo to your local machine
-  * Run the flask web app and confirm that the Hello World page is displayed (python app.py)
-  * Add a new route at /message which displays a message of your choice
+  * Check you have git, a text editor, Python and pip installed.
+  * Clone the repo to your local machine.
+  * From the project folder, install the dependencies: `sudo pip install
+    -r requirements.txt`
+  * Run the flask web app and confirm that the Hello World page is displayed:
+    `python app.py`
+  * Add a new route at /message which displays a message of your choice.
+    Look at the code in app.py and re-use fragments of the code to
+    achieve this. You could also try the
+    [Flask documentation](http://flask.pocoo.org/docs/0.10/quickstart/)
 
 2. Vulnerability review
-  * Look at the source code for the web application (app.py) - can you see any 
+  * Look at the source code for the web application (app.py) - can you see any
     security problems?
-  * Find 3 vulnerabilities and confirm the answers with the trainer, ask for 
-    hints if needed!
-  * Open the web application and try to exploit these vulnerabilities
-  * Demonstrate exploitation of each vulnerability to the trainer, again ask 
+  * Find 3 vulnerabilities and confirm the answers with the trainer, ask for
+    hints if needed! You might get some ideas from the
+    [OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10)
+  * Open the web application and try to exploit these vulnerabilities.
+  * Demonstrate exploitation of each vulnerability to the trainer, again ask
     for hints if needed!
 
 3. Vulnerability mitigation
